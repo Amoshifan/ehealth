@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: plum;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+
+    li {
+      background-color: #eee;
+      color: gray;
+      padding: 10px 15px;
+      margin: 5px 0;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    li.completed {
+      background-color: #d4edda;
+      color: green;
+    }
+
+    .checkmark {
+      font-size: 18px;
+      visibility: hidden;
+    }
+
+    li.completed .checkmark {
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Interactive To Do List</h1>
+  <ul id="todo-list">
+    <li onclick="toggleTask(this)">Do Morning Devotion <span class="checkmark">✔️</span></li>
+    <li onclick="toggleTask(this)">Take a Shower <span class="checkmark">✔️</span></li>
+    <li onclick="toggleTask(this)">Take Breakfast <span class="checkmark">✔️</span></li>
+    <li onclick="toggleTask(this)">Go To Work<span class="checkmark">✔️</span></li>
+    <li onclick="toggleTask(this)">Rest and Rest <span class="checkmark">✔️</span></li>
+  </ul>
+
+  <script>
+    function toggleTask(item) {
+      item.classList.toggle('completed');
+    }
+  </script>
+
+</body>
+</html>
