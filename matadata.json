@@ -1,0 +1,5 @@
+
+{
+  "name": "React Hooks Task Manager",
+  "description": "A simple task manager application demonstrating React hooks (useState, useEffect, useContext) for state management, side effects, and global theming. Tasks are saved to local storage."
+}
